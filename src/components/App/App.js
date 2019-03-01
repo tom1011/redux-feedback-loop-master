@@ -7,18 +7,23 @@ import FeelingsPage from '../FeelingsPage/FeelingsPage';
 import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
+import { HashRouter as Router, Route, Link } from 'react-router-dom';
 
 
 class App extends Component {
   render() {
     return (
       <>
-      {/* <Header /> */}
-      <FeelingsPage />
-      {/* <Understanding /> */}
-      {/* <Support /> */}
-      {/* <Comments /> */}
-      {/* <Review /> */}
+      <Router>
+          <div>
+          {/* <Header /> */}
+          <Route exact path="/" component={FeelingsPage} />
+          <Route exact path="/understanding" component={Understanding} />
+          <Route exact path="/support" component={Support} />
+          <Route exact path="/comments" component={Comments} />
+          {/* <Review /> */}
+          </div>
+        </Router>
       </>
     );
   }

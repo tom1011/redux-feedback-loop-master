@@ -11,6 +11,7 @@ class UnderstandingPage extends Component {
 
     onNextClick = () => {
         this.props.dispatch({ type: 'UNDERSTANDING_INFO', payload: this.state.feeling })
+        this.props.history.push('/support')
     }
 
     onChangeFunction = (event) => {

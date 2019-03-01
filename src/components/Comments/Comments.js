@@ -24,7 +24,7 @@ class SupportPage extends Component {
     return (
         <>
         <Header />
-        <p>Support</p>
+        <p>Comments</p>
         <input onChange={this.onChangeFunction} type = "text"/>
         <button onClick={this.onNextClick}>Next</button>
         <Review />

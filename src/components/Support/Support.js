@@ -12,6 +12,7 @@ class SupportPage extends Component {
 
     onNextClick = () => {
         this.props.dispatch({ type: 'SUPPORT_INFO', payload: this.state.feeling })
+        this.props.history.push('/comments')
     }
 
     onChangeFunction = (event) => {
