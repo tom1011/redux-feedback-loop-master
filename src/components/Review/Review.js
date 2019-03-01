@@ -5,6 +5,21 @@ import './Review.css';
 
 class Review extends Component {
 
+    submitButton = () => {
+        axios({
+            method: 'POST',
+            url: '/api/pizza',
+            Data: {
+                feeling: this.props.feelingsInfo,
+                understanding: this.props.understandingInfo ,
+                support: this.props.supportInfo,
+                comments: this.props.commentsInfo,
+            }
+        }).then( () => {
+            console.log('in post .then')
+        })
+    }
+
     updateDOMFeedback = () => {
     axios({
         method: 'GET',
@@ -19,6 +34,22 @@ class Review extends Component {
 
 
   render() {
+      let isDisabled = true
+      let buttonRender = null
+      if (this.props.feelingsInfo !== 0 && 
+        this.props.understandingInfo !== 0  &&
+        this.props.supportInfo !== 0 &&
+        this.props.commentsInfo !== ''
+        ){
+            isDisabled = false
+        }
+        if (isDisabled){
+
+        } else {
+            buttonRender =<button onClick={this.submitButton} disabled={isDisabled}>Submit</button>
+        }
+
+      
       console.log(this.props.feelingsInfo)
     return (
         <div className="textaline">
@@ -31,6 +62,7 @@ class Review extends Component {
             <br/>
             <p>Comments: {this.props.commentsInfo} </p>
             <br/>
+            {buttonRender}
         </div>
     );
   }

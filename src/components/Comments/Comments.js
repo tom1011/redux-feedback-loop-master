@@ -12,6 +12,7 @@ class SupportPage extends Component {
 
     onNextClick = () => {
         this.props.dispatch({ type: 'COMMENT_INFO', payload: this.state.feeling })
+        this.props.history.push('/review')
     }
 
     onChangeFunction = (event) => {
@@ -24,7 +25,7 @@ class SupportPage extends Component {
     return (
         <>
         <Header />
-        <p>Comments</p>
+        <p>Any Comments you want to leave?</p>
         <input onChange={this.onChangeFunction} type = "text"/>
         <button onClick={this.onNextClick}>Next</button>
         <Review />

@@ -21,7 +21,7 @@ class App extends Component {
           <Route exact path="/understanding" component={Understanding} />
           <Route exact path="/support" component={Support} />
           <Route exact path="/comments" component={Comments} />
-          {/* <Review /> */}
+          <Route exact path="/review" component={Review} />
           </div>
         </Router>
       </>

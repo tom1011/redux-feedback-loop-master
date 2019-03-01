@@ -25,7 +25,7 @@ class SupportPage extends Component {
     return (
         <>
         <Header />
-        <p>Support</p>
+        <p> How supported do you Feel today?</p>
         <input onChange={this.onChangeFunction} type = "number"/>
         <button onClick={this.onNextClick}>Next</button>
         <Review />
