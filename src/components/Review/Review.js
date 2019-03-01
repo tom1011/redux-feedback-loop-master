@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { connect } from "react-redux";
+import './Review.css';
 
 class Review extends Component {
 
@@ -20,15 +21,15 @@ class Review extends Component {
   render() {
       console.log(this.props.feelingsInfo)
     return (
-        <div>
+        <div className="textaline">
             <h1> Review Your Feedback</h1>
-            <p>Feelings: {this.props.feelingsInfo.feeling} </p>
+            <p>Feelings: {this.props.feelingsInfo} </p>
             <br/>
-            <p>Understanding: {this.props.understandingInfo.understanding} </p>
+            <p>Understanding: {this.props.understandingInfo} </p>
             <br/>
-            <p>Support: {this.props.supportInfo.support} </p>
+            <p>Support: {this.props.supportInfo} </p>
             <br/>
-            <p>Comments: {this.props.commentsInfo.comment} </p>
+            <p>Comments: {this.props.commentsInfo} </p>
             <br/>
         </div>
     );

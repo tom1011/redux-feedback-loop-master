@@ -3,6 +3,7 @@ import axios from 'axios';
 import { connect } from "react-redux";
 import Header from '../Header/Header';
 import Review from '../Review/Review';
+import FeelingsPage from '../FeelingsPage/FeelingsPage';
 
 
 class App extends Component {
@@ -10,6 +11,7 @@ class App extends Component {
     return (
       <>
       <Header />
+      <FeelingsPage />
       <Review />
       </>
     );
