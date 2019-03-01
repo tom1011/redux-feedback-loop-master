@@ -6,17 +6,25 @@ import { Provider } from 'react-redux';
 import { createStore, combineReducers } from 'redux';
 
 
-const feelingsInfo = (state = 5, action) => { 
+const feelingsInfo = (state = 0, action) => { 
     if (action.type === 'FEELINGS_INFO'){
         console.log('in feeling info,', action.payload)
         return action.payload
     }
     return state
 }
-const understandingInfo = (state = 4, action) => { 
+const understandingInfo = (state = 0, action) => { 
+    if (action.type === 'UNDERSTANDING_INFO'){
+        console.log('in understanding info,', action.payload)
+        return action.payload
+    }
     return state
 }
-const supportInfo = (state = 3, action) => { 
+const supportInfo = (state = 0, action) => { 
+    if (action.type === 'SUPPORT_INFO'){
+        console.log('in understanding info,', action.payload)
+        return action.payload
+    }
     return state
 }
 const commentsInfo = (state = "hello world", action) => { 

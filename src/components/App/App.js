@@ -4,6 +4,8 @@ import { connect } from "react-redux";
 import Header from '../Header/Header';
 import Review from '../Review/Review';
 import FeelingsPage from '../FeelingsPage/FeelingsPage';
+import Understanding from '../Understanding/Understanding';
+import Support from '../Support/Support';
 
 
 class App extends Component {
@@ -12,6 +14,8 @@ class App extends Component {
       <>
       <Header />
       <FeelingsPage />
+      <Understanding />
+      <Support />
       <Review />
       </>
     );
