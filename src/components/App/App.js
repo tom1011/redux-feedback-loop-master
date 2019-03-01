@@ -6,6 +6,7 @@ import Review from '../Review/Review';
 import FeelingsPage from '../FeelingsPage/FeelingsPage';
 import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
+import Comments from '../Comments/Comments';
 
 
 class App extends Component {
@@ -13,9 +14,10 @@ class App extends Component {
     return (
       <>
       <Header />
-      <FeelingsPage />
-      <Understanding />
-      <Support />
+      {/* <FeelingsPage /> */}
+      {/* <Understanding /> */}
+      {/* <Support /> */}
+      <Comments />
       <Review />
       </>
     );

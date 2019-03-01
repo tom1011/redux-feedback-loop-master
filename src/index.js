@@ -27,7 +27,12 @@ const supportInfo = (state = 0, action) => {
     }
     return state
 }
+
 const commentsInfo = (state = "hello world", action) => { 
+    if (action.type === 'COMMENT_INFO'){
+        console.log('in understanding info,', action.payload)
+        return action.payload
+    }
     return state
 }
 

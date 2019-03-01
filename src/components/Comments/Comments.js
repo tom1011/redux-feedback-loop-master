@@ -7,11 +7,11 @@ import Review from '../Review/Review';
 
 class SupportPage extends Component {
     state = {
-        feeling: 0
+        feeling: ''
     }
 
     onNextClick = () => {
-        this.props.dispatch({ type: 'SUPPORT_INFO', payload: this.state.feeling })
+        this.props.dispatch({ type: 'COMMENT_INFO', payload: this.state.feeling })
     }
 
     onChangeFunction = (event) => {
@@ -25,7 +25,7 @@ class SupportPage extends Component {
         <>
         <Header />
         <p>Support</p>
-        <input onChange={this.onChangeFunction} type = "number"/>
+        <input onChange={this.onChangeFunction} type = "text"/>
         <button onClick={this.onNextClick}>Next</button>
         <Review />
         </>
