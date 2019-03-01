@@ -13,12 +13,12 @@ class App extends Component {
   render() {
     return (
       <>
-      <Header />
-      {/* <FeelingsPage /> */}
+      {/* <Header /> */}
+      <FeelingsPage />
       {/* <Understanding /> */}
       {/* <Support /> */}
-      <Comments />
-      <Review />
+      {/* <Comments /> */}
+      {/* <Review /> */}
       </>
     );
   }

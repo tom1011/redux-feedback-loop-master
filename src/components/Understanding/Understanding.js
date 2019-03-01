@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import { connect } from "react-redux";
+import Header from '../Header/Header';
+import Review from '../Review/Review';
 
 
 class UnderstandingPage extends Component {
@@ -21,8 +22,11 @@ class UnderstandingPage extends Component {
   render() {
     return (
         <>
+        <Header />
+        <h2> How well are you understanding the material?</h2>
         <input onChange={this.onChangeFunction} type = "number"/>
         <button onClick={this.onNextClick}>Next</button>
+        <Review />
         </>
     );
   }
