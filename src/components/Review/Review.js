@@ -15,22 +15,10 @@ class Review extends Component {
                 support: this.props.supportInfo,
                 comments: this.props.commentsInfo }  
         }).then( () => {
+            this.props.history.push('/finalPage')
             console.log('in post .then')
         })
     }
-
-    updateDOMFeedback = () => {
-    axios({
-        method: 'GET',
-        url: '/api/feedback'
-    }).then((response) => {
-        console.log(response);
-        // response.data will be the array of Pizza
-        this.props.dispatch({ type: '', payload: response.data })
-    })
-}
-
-
 
   render() {
       let isDisabled = true
