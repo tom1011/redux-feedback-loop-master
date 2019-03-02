@@ -8,13 +8,12 @@ class Review extends Component {
     submitButton = () => {
         axios({
             method: 'POST',
-            url: '/api/pizza',
-            Data: {
+            url: '/feedback',
+            data:{
                 feeling: this.props.feelingsInfo,
                 understanding: this.props.understandingInfo ,
                 support: this.props.supportInfo,
-                comments: this.props.commentsInfo,
-            }
+                comments: this.props.commentsInfo }  
         }).then( () => {
             console.log('in post .then')
         })
@@ -23,7 +22,7 @@ class Review extends Component {
     updateDOMFeedback = () => {
     axios({
         method: 'GET',
-        url: '/api/pizza'
+        url: '/api/feedback'
     }).then((response) => {
         console.log(response);
         // response.data will be the array of Pizza

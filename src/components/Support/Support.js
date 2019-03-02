@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 import Header from '../Header/Header';
 import Review from '../Review/Review';
 
-
 class SupportPage extends Component {
     state = {
         feeling: 0
