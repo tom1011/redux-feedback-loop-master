@@ -3,6 +3,7 @@ import axios from 'axios';
 import { connect } from "react-redux";
 import Header from '../Header/Header';
 import Review from '../Review/Review';
+import "./Comments.css"
 
 
 class SupportPage extends Component {
@@ -25,9 +26,11 @@ class SupportPage extends Component {
     return (
         <>
         <Header />
+        <div className = "textaline">
         <p>Any Comments you want to leave?</p>
         <input onChange={this.onChangeFunction} type = "text"/>
         <button onClick={this.onNextClick}>Next</button>
+        </div>
         <Review />
         </>
     );

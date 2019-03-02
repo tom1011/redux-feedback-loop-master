@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import "./FinalPage.css"
 
 
 
@@ -11,9 +11,11 @@ class FinalPage extends Component {
   render() {
     return (
         <>
+        <div className='textaline'>
         <h2>Thank You for Your Feedback!!</h2>
         <h3>have a Wonderfull day.</h3>
         <button onClick={this.onNextClick}>New Feedback</button>
+        </div>
         </>
     );
   }

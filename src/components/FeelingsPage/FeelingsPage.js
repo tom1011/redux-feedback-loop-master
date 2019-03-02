@@ -24,9 +24,11 @@ class FeelingsPage extends Component {
     return (
         <>
         <Header />
+        <div className = "textaline">
         <h2>How are you Feeling today?</h2>
         <input onChange={this.onChangeFunction} type = "number"/>
         <button onClick={this.onNextClick}>Next</button>
+        </div>
         <Review />
         </>
     );

@@ -3,6 +3,7 @@ import axios from 'axios';
 import { connect } from "react-redux";
 import Header from '../Header/Header';
 import Review from '../Review/Review';
+import "./Support.css";
 
 class SupportPage extends Component {
     state = {
@@ -24,9 +25,11 @@ class SupportPage extends Component {
     return (
         <>
         <Header />
+        <div className="textaline">
         <p> How supported do you Feel today?</p>
         <input onChange={this.onChangeFunction} type = "number"/>
         <button onClick={this.onNextClick}>Next</button>
+        </div>
         <Review />
         </>
     );

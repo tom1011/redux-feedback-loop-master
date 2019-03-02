@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import Header from '../Header/Header';
 import Review from '../Review/Review';
+import './Understanding.css';
 
 
 class UnderstandingPage extends Component {
@@ -24,9 +25,11 @@ class UnderstandingPage extends Component {
     return (
         <>
         <Header />
+        <div className="textaline">
         <h2> How well are you understanding the material?</h2>
         <input onChange={this.onChangeFunction} type = "number"/>
         <button onClick={this.onNextClick}>Next</button>
+        </div>
         <Review />
         </>
     );
