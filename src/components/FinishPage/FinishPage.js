@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import "./FinalPage.css"
-
+import "./FinishPage.css"
 
 
 class FinalPage extends Component {

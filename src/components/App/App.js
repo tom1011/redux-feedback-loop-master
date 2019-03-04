@@ -7,7 +7,7 @@ import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
-import FinalPage from './FinishPage/FinishPage';
+import FinalPage from '../FinishPage/FinishPage';
 
 
 
@@ -23,7 +23,7 @@ class App extends Component {
           <Route exact path="/support" component={Support} />
           <Route exact path="/comments" component={Comments} />
           <Route exact path="/review" component={Review} />
-          <Route exact path="/finalPage" component={FinalPage} />
+          <Route exact path="/finalpage" component={FinalPage} />
           </div>
         </Router>
       </>
