@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import Header from '../Header/Header';
 import Review from '../Review/Review';
+import "./FeelingsPage.css";
 
 
 class FeelingsPage extends Component {
@@ -27,7 +28,7 @@ class FeelingsPage extends Component {
         <div className = "textaline">
         <h2>How are you Feeling today?</h2>
         <input onChange={this.onChangeFunction} type = "number"/>
-        <button onClick={this.onNextClick}>Next</button>
+        <button className="myButton" onClick={this.onNextClick}>Next</button>
         </div>
         <Review />
         </>
